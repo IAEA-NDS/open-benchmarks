@@ -11,7 +11,7 @@ users should be aware that significant changes could be made to the structures a
 
 ## Description of contents
 
-- [jade_open_benchmarks](./jade_open_benchmarks) contains all template inputs of the benchmarks that are freely distributed and that can be used in [JADE](https://jade-a-nuclear-data-libraries-vv-tool.readthedocs.io/en/latest/). A complete description of the benchmarks can be found in the [specific JADE documentation seciton](https://jade-a-nuclear-data-libraries-vv-tool.readthedocs.io/en/latest/usage/benchmarks.html). Additional details on how the repo is structured and how to upload or modify the inputs is provided [here](./jade_open_benchmarks/jade_benchmarks.md).
+- [jade_open_benchmarks](./jade_open_benchmarks) contains all template inputs of the benchmarks that are freely distributed and that can be used in [JADE](https://jade-a-nuclear-data-libraries-vv-tool.readthedocs.io/en/latest/). A complete description of the benchmarks can be found in the [specific JADE documentation section](https://jade-a-nuclear-data-libraries-vv-tool.readthedocs.io/en/latest/usage/benchmarks.html). Additional details on how the repo is structured and how to upload or modify the inputs are provided [here](./jade_open_benchmarks/jade_benchmarks.md).
 
 ## License
 
