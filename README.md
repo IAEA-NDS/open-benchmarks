@@ -15,7 +15,7 @@ users should be aware that significant changes could be made to the structures a
 
 ## License
 
-The data in this repository is distributed under the [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/deed.en) license.
+All data (including input files, reference output and experimental data) in this repository are distributed under the [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/deed.en) license.
 See the `LICENSE` file for details on terms and conditions. 
 
 ## Related projects
