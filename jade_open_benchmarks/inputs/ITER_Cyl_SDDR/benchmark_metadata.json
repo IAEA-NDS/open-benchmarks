@@ -1,8 +1,6 @@
 {
     "name": "ITER_Cyl_SDDR",
     "version": {
-        "ITER_Cyl_SDDR.i": "1.0",
-        "ITER_Cyl_SDDR_irrad": "1.0",
-        "ITER_Cyl_SDDR_react": "1.0"
+        "d1s": "1.0",
     }
 }
