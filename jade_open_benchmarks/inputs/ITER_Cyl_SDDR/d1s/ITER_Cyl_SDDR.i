@@ -358,8 +358,8 @@ m2    5010.21c 1.02286e-05
       83209.21c 2.13e-06
 C END OF MATERIALS
 mode n p
-imp:n 1 165i 0
-imp:p 1 165i 0
+imp:n 1 165r 0
+imp:p 1 165r 0
 phys:n  20 j
 cut:n   j  0.0   -1.0  -0.05   1
 print
@@ -402,7 +402,7 @@ c -------------------- End of tally section -----------------------
 C
 C ---------------------D1S TALLY SECTION    -----------------------
 c Dose rate flux tallies
-ZA 1e6 0
+ZA 0 1e6
 c
 C ---------------- Dose Calculation --------------------------------------------
 C    tally  *    ICF           *      DF        *   Sv/pSv       *     s/h    
