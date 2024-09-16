@@ -4,27 +4,32 @@ All benchmark inputs that can be freely redistributed and are used in [JADE](htt
 The structure of the files is as follows:
 ```
 jade_open_benchmarks
-       |
-       |----<single_run_benchmark_name>
-       |              |
-       |              |----<code>
-       |              |       |-----<benchmark input files>
-       |              |
-       |              |----benchmark_metadata.json
-       |
-       |
-       |---<multi_run_benchmark_name>
-       |              |
-       |              |-----<run1>
-       |              |        |------<code>
-       |              |                  |-----<benchmark input files>
-       |              |           
-       |              |----benchmark_metadata.json
-       |
-       |---<...>                            
+        |
+        |------- exp_results
+        |           |------------<benchmark name>
+        |
+        |------- inputs
+                    |
+                    |----<single_run_benchmark_name>
+                    |              |
+                    |              |----<code>
+                    |              |       |-----<benchmark input files>
+                    |              |
+                    |              |----benchmark_metadata.json
+                    |
+                    |
+                    |---<multi_run_benchmark_name>
+                    |              |
+                    |              |-----<run1>
+                    |              |        |------<code>
+                    |              |                  |-----<benchmark input files>
+                    |              |           
+                    |              |----benchmark_metadata.json
+                    |
+                    |---<...>                            
 
 ```
-If a new benchmark is added to this repository, it shall follow the same structure presented here, including a `benchmark_metada.json` file as the example below:
+If a new benchmark is added to this repository, it shall follow the same structure presented here, including a `benchmark_metada.json` file in the input folder as the example below:
 
 ```json
 {
