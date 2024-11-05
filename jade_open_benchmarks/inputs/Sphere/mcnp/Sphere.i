@@ -1,11 +1,12 @@
 MCNP XS LEAK SPHERE TEST INPUT VRT
 1  0          -1    IMP:N=1   IMP:P=1
 2  1 -0.302  +1 -2     IMP:N=1   IMP:P=1
-3  0          +2    IMP:N=0   IMP:P=0
+3  0          +2 -3 IMP:N=1 IMP:P=1
+4  0          +3    IMP:N=0   IMP:P=0
 
 1 S 0 0 0 5
 2 S 0 0 0 50
-3 S 0 0 0 60
+3 S 0 0 0 50.01
 C
 
 C
@@ -18,9 +19,9 @@ PHYS:P J 1
 c
 PRDMP  2J  -1 $ Flag to print the mctal
 C
-FC2 Neutron Flux at the external surface in Vitamin-J 175 energy groups
-F2:N 2
-E2   1.000E-07  4.140E-07  5.316E-07  6.826E-07  8.764E-07  1.125E-06
+FC54 Neutron Flux at the external surface in Vitamin-J 175 energy groups
+F54:N 3
+E54   1.000E-07  4.140E-07  5.316E-07  6.826E-07  8.764E-07  1.125E-06
      1.445E-06  1.855E-06  2.382E-06  3.059E-06  3.928E-06  5.043E-06
      6.476E-06  8.315E-06  1.068E-05  1.371E-05  1.760E-05  2.260E-05
      2.902E-05  3.727E-05  4.785E-05  6.144E-05  7.889E-05  1.013E-04
@@ -51,13 +52,13 @@ E2   1.000E-07  4.140E-07  5.316E-07  6.826E-07  8.764E-07  1.125E-06
      1.455E+01  1.492E+01  1.568E+01  1.649E+01  1.690E+01  1.733E+01
      1.964E+01         
 C
-FC22 Gamma flux at the external surface 
-F22:P 2
-E22: 1e-2 1e-1 1 5 20
+FC64 Gamma flux at the external surface 
+F64:P 3
+E64: 1e-2 1e-1 1 5 20
 C
-FC32 Gamma flux at the external surface [FINE@FISPACT MANUAL 24 Group Structure]
-F32:P 2
-E32: 0.01 0.02 0.05 0.10 0.20 0.30 0.40 0.60 0.80 1.00 1.22 1.44 1.66 2.00 2.50
+FC74 Gamma flux at the external surface [FINE@FISPACT MANUAL 24 Group Structure]
+F74:P 3
+E74: 0.01 0.02 0.05 0.10 0.20 0.30 0.40 0.60 0.80 1.00 1.22 1.44 1.66 2.00 2.50
      3.00 4.00 5.00 6.50 8.00 10.00 12.00 14.00 20.00
 C
 FC4 Neutron heating with F4+FM multiplier
@@ -78,9 +79,9 @@ FC46 Gamma heating F6
 F46:P 2
 SD46 1
 C
-FC12 Neutron Flux at the external surface in course energy groups
-F12:N 2
-E12 1e-6 0.1 1 10 20
+FC84 Neutron Flux at the external surface in course energy groups
+F84:N 3
+E84 1e-6 0.1 1 10 20
 C
 FC24 T production
 F24:N 2
