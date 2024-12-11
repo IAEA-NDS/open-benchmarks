@@ -78,19 +78,19 @@
   <scores>heating</scores>
   </tally>
   <tally id="26" name="Neutron nuclear heating in PF coils">
-  <filters>1 11</filters>
+  <filters>1 19</filters>
   <scores>heating</scores>
   </tally>
   <tally id="36" name="Photon nuclear heating in PF coils">
-  <filters>3 11</filters>
+  <filters>3 19</filters>
   <scores>heating</scores>
   </tally>
   <tally id="361" name="Positron nuclear heating in PF coils">
-  <filters>7 11</filters>
+  <filters>7 19</filters>
   <scores>heating</scores>
   </tally>
   <tally id="362" name="Electron nuclear heating in PF coils">
-  <filters>9 11</filters>
+  <filters>9 19</filters>
   <scores>heating</scores>
   </tally>
   <tally id="46" name="Neutron nuclear heating in VV">
