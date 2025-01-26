@@ -10,21 +10,15 @@ jade_open_benchmarks
         |
         |------- inputs
                     |
-                    |----<single_run_benchmark_name>
-                    |              |
-                    |              |----<code>
-                    |              |       |-----<benchmark input files>
-                    |              |
-                    |              |----benchmark_metadata.json
                     |
                     |
-                    |---<multi_run_benchmark_name>
-                    |              |
-                    |              |-----<run1>
-                    |              |        |------<code>
-                    |              |                  |-----<benchmark input files>
-                    |              |           
-                    |              |----benchmark_metadata.json
+                    |---<benchmark_name>
+                    |            |
+                    |            |-----<run name>
+                    |            |        |------<code>
+                    |            |                  |-----<benchmark input files>
+                    |            |           
+                    |            |----benchmark_metadata.json
                     |
                     |---<...>                            
 
