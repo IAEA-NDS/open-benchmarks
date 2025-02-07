@@ -28,7 +28,7 @@ See the `LICENSE` file for details on terms and conditions.
 ## Git Large Files System (LFS)
 This repository makes use of [git lfs](https://git-lfs.com/) an extension of ``git`` which allows to deal more effectively with large files. This is necessary to deal with weight windows file which can be quite heavy and not exactly git-friendly.
 To take advantage of git-lfs, developers should:
-1) Install the git lfs ectension from the website
+1) Install the git lfs extension from the website
 2) activate it through ``git lfs install`` (to be run only once per user account)
 
 Additional files to be tracked with lfs system can be added with ``git lfs track "<some regex>"`` where the admissible regex are the same as for the ``.gitignore`` file. To check which files are currently tracked via lfs one can run ``git lfs ls-files``. 
