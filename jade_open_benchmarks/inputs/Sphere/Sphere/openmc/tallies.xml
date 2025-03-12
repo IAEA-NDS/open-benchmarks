@@ -3,6 +3,9 @@
   <filter id="1" type="cell">
     <bins>3</bins>
   </filter>
+  <filter id="23" type="cell">
+    <bins>2</bins>
+  </filter>
   <filter id="3" type="particle">
     <bins>neutron</bins>
   </filter>
@@ -40,19 +43,19 @@
     <scores>flux</scores>
   </tally>
   <tally id="6" name="Neutron heating F6">
-    <filters>1 3</filters>
+    <filters>23 3</filters>
     <scores>heating</scores>
   </tally>
   <tally id="46" name="Gamma heating F6">
-    <filters>1 7</filters>
+    <filters>23 7</filters>
     <scores>heating</scores>
   </tally>
   <tally id="461" name="Positron heating F6">
-    <filters>1 11</filters>
+    <filters>23 11</filters>
     <scores>heating</scores>
   </tally>
   <tally id="462" name="Electron heating F6">
-    <filters>1 9</filters>
+    <filters>23 9</filters>
     <scores>heating</scores>
   </tally>
   <tally id="12" name="Neutron Flux at the external surface in course energy groups">
