@@ -5,5 +5,5 @@
   <cell id="1" material="void" region=" -1" universe="0" />
   <cell id="2" material="1" region=" 1 -2" universe="0" />
   <cell id="3" material="void" region=" 2 -3" universe="0" />
-  <cell id="3" material="void" region="3" universe="0" />
+  <cell id="4" material="void" region="3" universe="0" />
 </geometry>
