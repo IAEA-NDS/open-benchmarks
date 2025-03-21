@@ -1,15 +1,16 @@
+C ---------------------------------------------------------------------------- C
+C Model developed by UKAEA, Culham Campus, Abingdon, Oxfordshire, OX14 3DB.
+C The Simple Tokamak contains representative model of major tokamak components
+C intended for Monte Carlo code benchmarking studies. 
+C ---------------------------------------------------------------------------- C
+C
 C ====================================================================== C
-C Created by SuperMC
+C Converted by SuperMC
 C SuperMC, Super Monte Carlo Program for Nuclear and Radiation Simulation.
 C Copyright 1999-2017, FDS Team, China
 C ACIS version:24.0.1
 C ====================================================================== C
-C Model Name  : /temp.i
-C Start Time  : 2023/05/04 8:46:41 AM:Thursday
-C All Elapsed Time: 10 seconds.
-C Solids Analysis Time��8 seconds.
 C Model Size  : 145 Cell(s), 306 Surface(s)
-C
 C ======================================================================
 1     0   ( -9000 7000 -11000 10000 -6000) #5000                       
           IMP:N=1.0  IMP:P=1.0  IMP:E=0.0 TMP=2.53005e-008  FILL=1  
