@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.3 FATAL_ERROR)
+project(openmc_sources CXX)
+add_library(source SHARED iter_1d_source.cpp)
+find_package(OpenMC REQUIRED HINTS <path to openmc>)
+target_link_libraries(source OpenMC::libopenmc)
