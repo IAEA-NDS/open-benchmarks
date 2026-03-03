@@ -1,1 +1,4 @@
 get_wwinp.py
+*pyc
+.vscode
+**/__pycache__/
