@@ -3,6 +3,7 @@ import os
 from pathlib import Path
 import pandas as pd
 import re
+from f4enix import Input
 
 rmode_pat = re.compile(r"RMODE", re.IGNORECASE)
 
@@ -60,22 +61,32 @@ def test_error_relative():
 
 
 def test_no_RMODE_card():
-    for folder in os.listdir(ROOT / "inputs"):
-        folder_path = ROOT / "inputs" / folder
-        if not folder_path.is_dir():
-            continue
-        for subrun in os.listdir(folder_path):
-            subrun_path = folder_path / subrun
-            if not subrun_path.is_dir():
+    for file in mcnp_input_paths_generator():
+        with open(file) as f:
+            for line in f:
+                if rmode_pat.match(line):
+                    raise AssertionError(f"RMODE card found in {file}")
+
+
+def test_f4enix_readability():
+    """test that all MCNP input files can be read by f4enix"""
+    for file in mcnp_input_paths_generator():
+        _ = Input.from_input(file)
+
+
+def test_exp_data_naming_consistency():
+    """test that all files in exp_results have a corresponding input file with the
+    same name"""
+    known_exceptions = ["Oktavian_Pb"]
+    for folder in os.listdir(Path(ROOT, "exp_results")):
+        path_folder = Path(ROOT, "exp_results", folder)
+        for file in os.listdir(path_folder):
+            name = file.split(" ")[0]
+            if name in known_exceptions:
                 continue
-            for code in os.listdir(subrun_path):
-                if code != "mcnp":
-                    continue
-                file = subrun_path / code / f"{subrun}.i"
-                with open(file) as f:
-                    for line in f:
-                        if rmode_pat.match(line):
-                            raise AssertionError(f"RMODE card found in {file}")
+            assert Path(ROOT, "inputs", folder, name).exists(), (
+                f"File {file} in {folder} does not match any input file"
+            )
 
 
 def test_mcnp_filename_matches_subrun():
@@ -103,3 +114,19 @@ def test_mcnp_filename_matches_subrun():
                 assert actual_filename == expected_filename, (
                     f"File name mismatch in {mcnp_path}: expected '{expected_filename}', found '{actual_filename}'"
                 )
+
+
+def mcnp_input_paths_generator():
+    for folder in os.listdir(Path(ROOT, "inputs")):
+        folder_path = Path(ROOT, "inputs", folder)
+        if not folder_path.is_dir():
+            continue
+        for subrun in os.listdir(folder_path):
+            subrun_path = folder_path / subrun
+            if not subrun_path.is_dir():
+                continue
+            for code in os.listdir(subrun_path):
+                if code != "mcnp":
+                    continue
+
+                yield subrun_path / code / f"{subrun}.i"
