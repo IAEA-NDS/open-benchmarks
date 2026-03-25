@@ -51,7 +51,7 @@ FNS, material O, thickness 20.24 cm
 34    so  1000.0
 
 mode   n
-prdmp  2j 1 2
+PRDMP j -1000 1 1 1e11
 c
 c  Rotation about the y axis by theta
 c

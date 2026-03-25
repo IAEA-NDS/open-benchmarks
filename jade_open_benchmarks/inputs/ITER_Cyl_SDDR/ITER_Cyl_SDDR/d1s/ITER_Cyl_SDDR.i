@@ -363,7 +363,7 @@ imp:p 1 165r 0
 phys:n  20 j
 cut:n   j  0.0   -1.0  -0.05   1
 print
-prdmp  j 2e7 1 2 2e7
+PRDMP j -1000 1 1 1e11
 C nps 5e7
 sdef par n erg 14 cel 50 pos 0 0 -110 axs 0 0 1 rad d1 ext d2
 si1 0 100

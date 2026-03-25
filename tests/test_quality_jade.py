@@ -116,6 +116,35 @@ def test_mcnp_filename_matches_subrun():
                 )
 
 
+def test_prdmp_card_settings():
+    """Test that all MCNP input files have a suitable PRDMP card
+    settings should be explicit, mctal file needs to be printed and dump frequency
+    cannot be too low."""
+    for file in mcnp_input_paths_generator():
+        found = False
+        with open(file) as f:
+            for line in f:
+                if line.strip().upper().startswith("PRDMP"):
+                    prdmp_values = re.split(r"\s+", line.strip())
+                    # force card to be in explicit
+                    found = True
+                    break
+        if not found:
+            raise AssertionError(f"PRDMP card not found in {file}")
+        else:
+            assert len(prdmp_values) == 6, f"PRDMP card not explicit in {file}, {line}"
+            assert prdmp_values[1].upper() == "J"  # NDP
+            assert float(prdmp_values[2]) >= 5e7 or float(prdmp_values[2]) < -60  # NDM
+            assert int(prdmp_values[3]) > 0  # MCT
+            assert int(prdmp_values[4]) in [1, 2]  # NDMP no more than 2 dumps in runtpe
+            try:
+                DDMP = int(prdmp_values[5])
+            except ValueError:
+                DDMP = float(prdmp_values[5])
+
+            assert DDMP == 0 or DDMP >= 5e7  # DMMP
+
+
 def mcnp_input_paths_generator():
     for folder in os.listdir(Path(ROOT, "inputs")):
         folder_path = Path(ROOT, "inputs", folder)

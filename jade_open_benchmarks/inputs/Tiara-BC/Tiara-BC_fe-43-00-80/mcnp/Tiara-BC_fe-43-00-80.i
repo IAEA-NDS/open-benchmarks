@@ -174,4 +174,4 @@ E34      5  6  7  8  9 10 11 12 13 14
 print
 c nps 1000000
 cut:n j 4.0
-prdmp  2J  -1
+PRDMP j -1000 1 1 1e11

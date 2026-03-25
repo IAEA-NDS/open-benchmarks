@@ -16,7 +16,7 @@ C
 MODE N P
 PHYS:P J 1  
 c
-PRDMP  2J  -1 $ Flag to print the mctal
+PRDMP j -1000 1 1 1e11
 C
 FC2 Neutron Flux at the external surface in Vitamin-J 175 energy groups
 F2:N 2

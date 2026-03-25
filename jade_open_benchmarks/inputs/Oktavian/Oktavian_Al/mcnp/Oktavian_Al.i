@@ -19,7 +19,7 @@ c
 mode   n p
 sdef   pos=0 0 0  cel=1  erg=d1
 c  nps    1e5
-prdmp  2J  -1 $ Flag to print the mctal
+PRDMP j -1000 1 1 1e11
 cut:n  j  1e-3  0.01   $ Energy and weight cut-off
 c
 c   Fraction Mass
