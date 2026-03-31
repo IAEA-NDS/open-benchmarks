@@ -167,4 +167,4 @@ c nps 1000000
 cut:n j 5.0
 c * added by ADVANTG
 wwp:n 5.0 j 100 j -1 0 1.035827975e+01
-prdmp  2J  -1
+PRDMP j -1000 1 1 1e11

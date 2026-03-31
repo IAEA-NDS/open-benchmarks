@@ -282,4 +282,4 @@ DF44 LIN
 FM44 8.5854E+10
 print
 c nps 1000000
-prdmp  2J  -1
+PRDMP j -1000 1 1 1e11
