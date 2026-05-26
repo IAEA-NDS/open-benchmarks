@@ -1,2 +1,2 @@
-Value,Error,Offset,Fission Cell
-32700.0,0.0024,on-axis,Th-232
+Value,Error,Offset,Fission Cell,Shielding depth (cm)
+32700.0,0.0024,on-axis,Th-232,00

@@ -1,2 +1,2 @@
-Value,Error,Offset,Fission Cell
-195.0,0.035,20 cm,U-238
+Value,Error,Offset,Fission Cell,Shielding depth (cm)
+195.0,0.035,20 cm,U-238,20
