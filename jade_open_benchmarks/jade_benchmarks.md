@@ -38,10 +38,6 @@ If a new benchmark is added to this repository, it shall follow the same structu
 
 The supported codes (at varying degrees of maturity) for JADE at the moment are `mcnp`, `openmc`, `serpent` and `d1s` (D1SUNED).
 
-ACTINV scalar activation inputs are also provided for the [FNS iron decay-heat
-benchmark](./fns_decay_heat.md), using the ACTINV target introduced in
-[JADE PR #549](https://github.com/JADE-V-V/JADE/pull/549).
-
 Whenever a pull request is filed to change one of these inputs, the benchmark version in the metadata MUST be modified as well. The semantic versioning for the benchmarks foresees only two change levels:
 - **major**, if the retrocompatibility is not guaranteed. That is, results computed on previous version of the benchmark cannot be compared with the ones obtained from the new version.
 - **minor**, all improvements to the benchmark that guarantee retrocompatibility for results comparison. These could be aestethic changes, performance improvement, addition of variance reduction or even tallies additions in some cases.
